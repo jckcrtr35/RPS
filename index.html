@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function computerPlay() {
+            var values = ["Rock","Paper","Scissors"]
+            return values[Math.floor(Math.random() * values.length)]
+        }
+        console.log(computerPlay())
+        function playGame(playerSelection, computerSelection) {
+           // playerSelection[0].toUpperCase()
+            if (computerSelection === "Rock" && playerSelection === "Paper") {
+                return "Winner! Paper Beats Rock (somehow)."
+            } else if (computerSelection === "Rock" && playerSelection === "Scissors") {
+                return "Loser! Rock Beats Scissors."
+            } else if (computerSelection === "Rock" && playerSelection === "Rock") { 
+                return "Tie! Go again!"
+            }
+        }
+        console.log(playGame("Paper", computerPlay))
+    </script>
+</body>
+</html>
