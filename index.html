@@ -8,22 +8,39 @@
 </head>
 <body>
     <script>
-        function computerPlay() {
+        function computerSelection() {
             var values = ["Rock","Paper","Scissors"]
             return values[Math.floor(Math.random() * values.length)]
         }
-        console.log(computerPlay())
-        function playGame(playerSelection, computerSelection) {
-           // playerSelection[0].toUpperCase()
+        console.log(computerSelection())
+
+        function playerSelection() {
+            var values = ["Rock","Paper","Scissors"]
+            return values[Math.floor(Math.random() * values.length)]
+        }
+        function playGame(computerSelection, playerSelection) {
+            if (computerSelection === playerSelection) { 
+                return "Tie! Go again!"
+            }
             if (computerSelection === "Rock" && playerSelection === "Paper") {
                 return "Winner! Paper Beats Rock (somehow)."
             } else if (computerSelection === "Rock" && playerSelection === "Scissors") {
                 return "Loser! Rock Beats Scissors."
-            } else if (computerSelection === "Rock" && playerSelection === "Rock") { 
-                return "Tie! Go again!"
+            } 
+            if (computerSelection === "Paper" && playerSelection === "Scissors") {
+                return "Loser! Scissors Beats Paper."
+            } else if (computerSelection === "Paper" && playerSelection === "Rock") {
+                return "Winner! Paper Beats Rock (somehow)."
+            } 
+            if (computerSelection === "Scissors" && playerSelection === "Paper") {
+                return "Winner! Scissors Beats Paper."
+            } else if (computerSelection === "Scissors" && playerSelection === "Rock") {
+                return "Loser! Rock Beats Scissors."
             }
-        }
-        console.log(playGame("Paper", computerPlay))
+    }
+        
+        console.log(playerSelection())
+        console.log(playGame(playerSelection(), computerSelection()))
     </script>
 </body>
 </html>
