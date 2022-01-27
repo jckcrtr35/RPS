@@ -8,39 +8,36 @@
 </head>
 <body>
     <script>
-        function computerSelection() {
-            var values = ["Rock","Paper","Scissors"]
-            return values[Math.floor(Math.random() * values.length)]
-        }
-        console.log(computerSelection())
+        const playerSelection = userInput()
 
-        function playerSelection() {
+        function computerPlay() {
             var values = ["Rock","Paper","Scissors"]
             return values[Math.floor(Math.random() * values.length)]
         }
+        function userInput() {
+            return 
+        }
+
         function playGame(computerSelection, playerSelection) {
-            if (computerSelection === playerSelection) { 
-                return "Tie! Go again!"
-            }
             if (computerSelection === "Rock" && playerSelection === "Paper") {
                 return "Winner! Paper Beats Rock (somehow)."
             } else if (computerSelection === "Rock" && playerSelection === "Scissors") {
                 return "Loser! Rock Beats Scissors."
-            } 
-            if (computerSelection === "Paper" && playerSelection === "Scissors") {
-                return "Loser! Scissors Beats Paper."
-            } else if (computerSelection === "Paper" && playerSelection === "Rock") {
-                return "Winner! Paper Beats Rock (somehow)."
-            } 
-            if (computerSelection === "Scissors" && playerSelection === "Paper") {
+            } else if (computerSelection === "Paper" && playerSelection === "Scissors") {
                 return "Winner! Scissors Beats Paper."
+            } else if (computerSelection === "Paper" && playerSelection === "Rock") {
+                return "Loser! Paper Beats Rock (somehow)."
+            } else if (computerSelection === "Scissors" && playerSelection === "Paper") {
+                return "Loser! Scissors Beats Paper."
             } else if (computerSelection === "Scissors" && playerSelection === "Rock") {
-                return "Loser! Rock Beats Scissors."
-            }
+                return "Winner! Rock Beats Scissors."
+            } else (computerSelection === playerSelection) 
+                    return "Tie! Go again!"
     }
-        
-        console.log(playerSelection())
-        console.log(playGame(playerSelection(), computerSelection()))
+    const computerSelection = computerPlay()
+        console.log(computerSelection)
+        console.log(playerSelection)
+        console.log(playGame(computerSelection, playerSelection))
     </script>
 </body>
 </html>
