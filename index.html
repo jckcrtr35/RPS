@@ -8,32 +8,32 @@
 </head>
 <body>
     <script>
-        const playerSelection = userInput()
+        const playerSelection = prompt('Rock, Paper, or Scissors?')
 
         function computerPlay() {
-            var values = ["Rock","Paper","Scissors"]
+            var values = ["Rock","Paper","Scissors"];
             return values[Math.floor(Math.random() * values.length)]
         }
-        function userInput() {
-            return 
-        }
+      
 
         function playGame(computerSelection, playerSelection) {
-            if (computerSelection === "Rock" && playerSelection === "Paper") {
+            if (computerSelection === "Rock" && playerSelection === "paper") {
                 return "Winner! Paper Beats Rock (somehow)."
-            } else if (computerSelection === "Rock" && playerSelection === "Scissors") {
+            } else if (computerSelection === "Rock" && playerSelection === "scissors") {
                 return "Loser! Rock Beats Scissors."
-            } else if (computerSelection === "Paper" && playerSelection === "Scissors") {
+            } else if (computerSelection === "Paper" && playerSelection === "scissors") {
                 return "Winner! Scissors Beats Paper."
-            } else if (computerSelection === "Paper" && playerSelection === "Rock") {
+            } else if (computerSelection === "Paper" && playerSelection === "rock") {
                 return "Loser! Paper Beats Rock (somehow)."
-            } else if (computerSelection === "Scissors" && playerSelection === "Paper") {
+            } else if (computerSelection === "Scissors" && playerSelection === "paper") {
                 return "Loser! Scissors Beats Paper."
-            } else if (computerSelection === "Scissors" && playerSelection === "Rock") {
+            } else if (computerSelection === "Scissors" && playerSelection === "rock") {
                 return "Winner! Rock Beats Scissors."
-            } else (computerSelection === playerSelection) 
-                    return "Tie! Go again!"
+            } else {
+                 return "Tie! Go again!"
     }
+}
+        }
     const computerSelection = computerPlay()
         console.log(computerSelection)
         console.log(playerSelection)
